@@ -12,7 +12,10 @@ func _ready():
 func _process(delta):
 	var p1_lean = Input.get_axis("arm_back", "arm_forward")
 	var p2_lean = Input.get_axis("hand_down", "hand_up")
-
+	
+	#sprint(p1_lean)
+	#print(p2_lean)
+	print(Input.get_action_strength("mouth"))
 	if p1_lean >= 0.7 and p2_lean >= 0.7:
 		visible = false
 		get_tree().paused = false
